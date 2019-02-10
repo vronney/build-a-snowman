@@ -29,25 +29,25 @@ var dragndrop = (function() {
         whichArt.style.top = e.pageY - myY + 'px';
     }
 
-    function touchStart(e) {
-        e.preventDefault();
-        var whichArt = e.target;
-        var touch = e.touches[0];
-        var moveOffSetX = whichArt.offSetLeft - touch.pageX;
-        var moveOffSetY = whichArt.offSetTop - touch.pageY;
-        resetZ();
-        whichArt.style.zIndex = 10;
+    // function touchStart(e) {
+    //     e.preventDefault();
+    //     var whichArt = e.target;
+    //     var touch = e.touches[0];
+    //     var moveOffSetX = whichArt.offSetLeft - touch.pageX;
+    //     var moveOffSetY = whichArt.offSetTop - touch.pageY;
+    //     resetZ();
+    //     whichArt.style.zIndex = 10;
 
-        whichArt.addEventListener('touchmove', function() {
-            var positionX = touche.pageX+moveOffSetX;
-            var positionY = touche.pageY + moveOffSetY;
-            whichArt.style.left = positionX + 'px';
-            whichArt.style.top  = positionY + 'px';
-        }, false);
+    //     whichArt.addEventListener('touchmove', function() {
+    //         var positionX = touche.pageX+moveOffSetX;
+    //         var positionY = touche.pageY + moveOffSetY;
+    //         whichArt.style.left = positionX + 'px';
+    //         whichArt.style.top  = positionY + 'px';
+    //     }, false);
     }
 
     document.querySelector('body').addEventListener('dragstart', moveStart, false);
     document.querySelector('body').addEventListener('dragover', moveDragOver, false);
     document.querySelector('body').addEventListener('drop', moveDrop, false);
-    document.querySelector('body').addEventListener('touchstart', touchStart, false);    
+    // document.querySelector('body').addEventListener('touchstart', touchStart, false);    
 })();
