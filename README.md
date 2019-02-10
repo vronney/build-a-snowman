@@ -15,5 +15,5 @@ Each image is given its own id tag.
 ## Reset elements layering positions
 
 Items were assigned a z-index of 5 initially.   
-Once the item is dragged the z-index changes from 5 to 10 allowing the items to be placed on top of each other. 
+Once the item is dragged the z-index changes from 5 to 10 allowing the items to be placed on top of each other.     
 This was done with the resetZ().
